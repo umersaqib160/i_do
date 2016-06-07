@@ -1,4 +1,4 @@
-class SupplierController < ApplicationController
+class Supplier::ServicesController < ApplicationController
   def index
   end
 
@@ -6,18 +6,19 @@ class SupplierController < ApplicationController
   end
 
   def new
-
-  end
-
-  def edit
   end
 
   def create
+
   end
 
   def update
   end
 
+  def edit
+  end
+
   def destroy
   end
+
 end

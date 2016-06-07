@@ -1,17 +1,8 @@
 class ReservationsController < ApplicationController
-  def index
-
+  def create
   end
 
   def new
   end
 
-  def show
-  end
-
-  def confirm
-  end
-
-  def decline
-  end
 end
