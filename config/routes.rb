@@ -1,5 +1,57 @@
 Rails.application.routes.draw do
+  get 'demander/index'
+
+  get 'demander/show'
+
+  get 'profile/show'
+
+  get 'profile/edit'
+
+  get 'users/index'
+
+  get 'users/show'
+
+  get 'users/new'
+
+  get 'supplier/index'
+
+  get 'supplier/show'
+
+  get 'reservations/new'
+
+  get 'reservations/show'
+
+  get 'services/index'
+
+  get 'services/show'
+
   root to: 'pages#home'
+
+
+
+resources :services, only: [:index, :show] do
+  resources :reservations, only: [:new, :create]
+end
+
+namespace :supplier do
+  resources :services
+  resources :reservations, only: [:index, :show] do
+    member do
+      patch :confirm
+      patch :decline
+    end
+  end
+end
+
+
+namespace :demander do
+  resources :reservations, only: [:index, :show]
+end
+
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
