@@ -1,2 +1,37 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: url('<%= image_path ("utensils.jpg") %>');">
+  <div class="banner-content">
+
+
+  <%#= simple_form_for @service do |f| %>
+      <p class="searched-service">What service do you seek?</p>
+
+  <%#= f.input :name %>
+  <p class= "searched-location">What is your location?</p>
+  <%#= f.input :address %>
+  <%#= f.button :submit %>
+
+
+
+  </div>
+</div>
+
+<div class="wrapper-how-it-works">
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <i class="fa fa-search" aria-hidden="true"></i>
+      <p class="how-it-works"> Search the service</p>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+    <i class="fa fa-phone" aria-hidden="true"></i>
+    <p class="how-it-works">Contact & Book the service provider</p>
+      <!-- insert <div class="card"> -->
+    </div>
+    <div class="col-xs-12 col-sm-4">
+    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+    <p class="how-it-works">Get served</p>
+      <!-- insert <div class="card"> -->
+    </div>
+  </div>
+</div>
+</div>
