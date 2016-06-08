@@ -1,5 +1,6 @@
 class Supplier::ServicesController < ApplicationController
   def index
+
   end
 
   def show

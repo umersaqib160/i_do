@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
+
   devise_for :users
 
-
-
 root to: 'pages#home'
-
-
+post 'users/search' => 'users#search'
 
 resources :services, only: [:index, :show] do
   resources :reservations, only: [:new, :create]
@@ -27,9 +25,6 @@ end
 namespace :customer do
   resources :reservations, only: [:index, :show]
 end
-
-
-
 
 
   # The priority is based upon order of creation: first created -> highest priority.
