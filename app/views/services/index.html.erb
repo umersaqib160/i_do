@@ -1,7 +1,231 @@
-<h1>Services#index</h1>
-<p>Find me in app/views/services/index.html.erb</p>
-<% @services.each do |service|  %>
-  <%= service.name %>
+<div class="left">
+  <h1 title="Here you can find what you are looking for"></h1>
 
-  <%= link_to "see the supllier", service_path(service) %>
-  <% end %>
+  <p>
+    Here you can find the serviceprovider you need nearby postalcode: <b>...</b>.
+  </p>
+</div>
+
+<div class="container clearfix">
+  <div class="result_left">
+    <h2><a title="service provider 1"><span itemprop="name">Service provider 1</span></a></h2>
+    <div class="table_result">
+      <div class="row">
+        <div class="col_a">
+          <i class="fa fa-location-arrow" title="Provincie en plaats › Loodgieter Garant"></i>
+        </div>
+        <div class="col_b">
+          <a class="a_alternative" title="Loodgieter Noord-Holland">Noord-Holland</a>
+          » <a class="a_alternative" title="Loodgieter Amsterdam">Amsterdam</a>
+          » <strong>0,4 km</strong> vanaf 1032 XM
+          | <a href="#" onclick="switch_jbb(92,'googlemap','');return false;" class="a_astext" id="change_googlemap_92" title="Google map › Loodgieter Garant">Google maps <span class="color_a">▼</span></a><div class="maxwidth"><div id="show_googlemap_92" data-title="Loodgieter Garant" data-company="Loodgieter Garant" data-address="Wingerdweg 281" data-zipcode="1032 AK" data-place="Amsterdam" data-country="Nederland" data-lat="52.396969" data-lng="4.917844"></div></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col_a">
+          <i class="fa fa-street-view" title="Informatie › Loodgieter Garant"></i>
+        </div>
+        <div class="col_b" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+          <span itemprop="streetAddress">Wingerdweg 281</span>, <span itemprop="postalCode">1032 AK</span> <span itemprop="addressLocality">Amsterdam</span> (<span itemprop="addressRegion">Noord-Holland</span>)
+        </div>
+      </div>
+      <div class="row">
+        <div class="col_a">
+          <i class="fa fa-phone" title="Telefoonnummer › Loodgieter Garant"></i>
+        </div>
+        <div class="col_b">
+          Tel: <span itemprop="telephone">-</span>,
+          Fax: <span itemprop="faxNumber">-</span>,
+          KvK: <span itemprop="taxID">-</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col_a">
+          <i class="fa fa-at" title="E-mail › LService proivder 1"></i>
+        </div>
+        <div class="col_b">
+          <a title="E-mail › Loodgieter Garant">E-mail › Service provider 1</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col_a">
+          <i class="fa fa-desktop small" title="Website › Loodgieter Garant"></i>
+        </div>
+        <div class="col_b">
+          Website: <a href="http://www.serviceprovider1.nl/amsterdam/" title="serviceprovider1" onclick="count(92,this.href); return false;" itemprop="url">http://www.serviceprovider1.nl/amsterdam/</a> | <a href="#" onclick="switch_jbb(92,'screenshot','http://www.serviceprovider1.nl/amsterdam/');return false;" class="a_astext" id="change_screenshot_92" title="Screenshot › Loodgieter Garant"> <span class="color_a">▼</span></a><br><div class="maxwidth"><div id="show_screenshot_92"></div></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col_a">
+          <i class="fa fa-pencil" title="Beschrijving › Loodgieter Garant"></i>
+        </div>
+        <div class="col_b" itemprop="description">
+        <div class="clickable_container">
+          <a href="#" onclick="switch_jbb(92,'beschrijving','');return false;" class="clickable_ahref" title="Toon / verberg hele beschrijving › Loodgieter Garant"></a>
+          lorem ipsum lorem ipsum lorem ipsum
+          <span id="expand_beschrijving_92"><span class="color_a">▼</span></span>
+          <div id="hide_beschrijving_92" class="inline" style="display: none;">
+          lorem ipsum lorem ipsum lorem ipsum<br>
+           <br>
+           lorem ipsum lorem ipsum lorem ipsum
+           <span class="color_a">▲</span>
+         </div>
+       </div>
+     </div>
+   </div>
+   <div class="row">
+    <div class="col_a">
+      <i class="fa fa-tags small" title="Diensten › Loodgieter Garant"></i>
+    </div>
+    <div class="col_b">
+      <i>Diensten onbekend</i>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col_a">
+      <i class="fa fa-clock-o" title="Openingstijden › Loodgieter Garant"></i>
+    </div>
+    <div class="col_b">
+      <i>Openingstijden onbekend</i>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col_a">
+      <i class="fa fa-user" title="Sociale Media › Loodgieter Garant"></i>
+    </div>
+    <div class="col_b">
+      Sociale media:
+      <div class="social_links">
+        <a href="javascript:alert('Twitter onbekend...');" title="Twitter › Loodgieter Garant" class="disable"><i class="fa fa-twitter"></i></a>
+        <a href="javascript:alert('Facebook onbekend...');" title="Facebook › Loodgieter Garant" class="disable"><i class="fa fa-facebook"></i></a>
+        <a href="javascript:alert('Google plus onbekend...');" title="Google plus › Loodgieter Garant" class="disable"><i class="fa fa-google-plus"></i></a>
+        <a href="javascript:alert('Linkedin onbekend...');" title="Linkedin › Loodgieter Garant" class="disable"><i class="fa fa-linkedin"></i></a>
+        <a href="javascript:alert('Youtube onbekend...');" title="Youtube › Loodgieter Garant" class="disable"><i class="fa fa-caret-right"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="result_right">
+  <img src="http://www.loodgieter-vinden.nl/img/no-image.png" width="237" height="158" alt="Afbeelding › Loodgieter Garant" title="Afbeelding › Loodgieter Garant" class="img_multiple">
+</div>
+<br class="clear">
+<div class="result_bottom">
+  <div class="result_button">
+    <a title="Loodgieter Garant">Bekijk volledig profiel</a>
+  </div>
+  <a href="#" title="Ga naar de boven" class="result_gototop"><i class="fa fa-caret-up"></i></a>
+</div>
+</div>
+
+
+<div class="container clearfix">
+  <div class="result_left">
+    <h2><a title="Kiekebos Installatietechniek"><span itemprop="name">Service provider 2</span></a></h2>
+    <div class="table_result">
+      <div class="row">
+        <div class="col_a">
+          <i class="fa fa-location-arrow" title="Provincie en plaats › Kiekebos Installatietechniek"></i>
+        </div>
+        <div class="col_b">
+          <a class="a_alternative" title="Loodgieter Drenthe">Drenthe</a>
+          » <a class="a_alternative" title="Loodgieter Assen">Assen</a>
+          » <strong>127,0 km</strong> vanaf 1032 XM
+          | <a href="#" onclick="switch_jbb(27,'googlemap','');return false;" class="a_astext" id="change_googlemap_27" title="Google map › Kiekebos Installatietechniek">Google maps <span class="color_a">▼</span></a><div class="maxwidth"><div id="show_googlemap_27" data-title="Kiekebos Installatietechniek" data-company="Kiekebos Installatietechniek" data-address="Hertenlaan 88" data-zipcode="9408 CM" data-place="Assen" data-country="Nederland" data-lat="52.999096" data-lng="6.52035"></div></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col_a">
+          <i class="fa fa-street-view" title="Informatie › Kiekebos Installatietechniek"></i>
+        </div>
+        <div class="col_b" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+          <span itemprop="streetAddress">Hertenlaan 88</span>, <span itemprop="postalCode">9408 CM</span> <span itemprop="addressLocality">Assen</span> (<span itemprop="addressRegion">Drenthe</span>)
+        </div>
+      </div>
+      <div class="row">
+        <div class="col_a">
+          <i class="fa fa-phone" title="Telefoonnummer › Kiekebos Installatietechniek"></i>
+        </div>
+        <div class="col_b">
+          Tel: <span itemprop="telephone">0592-398602</span>,
+          Fax: <span itemprop="faxNumber">-</span>,
+          KvK: <span itemprop="taxID">04078160</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col_a">
+          <i class="fa fa-at" title="E-mail › Service provider 2"></i>
+        </div>
+        <div class="col_b">
+          <a title="E-mail › Service provider 2">E-mail › Service provider 2</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col_a">
+          <i class="fa fa-desktop small" title="Website › Kiekebos Installatietechniek"></i>
+        </div>
+        <div class="col_b">
+          Website: <a href="http://www.serviceprovider2.nl" title="Service provider 2" onclick="count(27,this.href); return false;" itemprop="url">http://www.serviceprovider2.nl</a> | <a href="#" onclick="switch_jbb(27,'screenshot','http://www.kiekebosassen.nl');return false;" class="a_astext" id="change_screenshot_27" title="Screenshot › KService provider 2"> <span class="color_a">▼</span></a><br><div class="maxwidth"><div id="show_screenshot_27"></div></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col_a">
+          <i class="fa fa-pencil" title="Beschrijving › Kiekebos Installatietechniek"></i>
+        </div>
+        <div class="col_b" itemprop="description">
+        <div class="clickable_container">
+          <a href="#" onclick="switch_jbb(27,'beschrijving','');return false;" class="clickable_ahref" title="Toon / verberg hele beschrijving › Kiekebos Installatietechniek"></a>
+          lorem ipsum lorem ipsum lorem ipsum
+          <span id="expand_beschrijving_27"><span class="color_a">▼</span></span>
+          <div id="hide_beschrijving_27" class="inline" style="display: none;">
+           installatie werkzaamheden zoals:<br>
+           <span class="color_a">▲</span>
+         </div>
+       </div>
+     </div>
+   </div>
+   <div class="row">
+    <div class="col_a">
+      <i class="fa fa-tags small" title="Diensten › Kiekebos Installatietechniek"></i>
+    </div>
+    <div class="col_b">
+      <i>Diensten onbekend</i>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col_a">
+      <i class="fa fa-clock-o" title="Openingstijden › Kiekebos Installatietechniek"></i>
+    </div>
+    <div class="col_b">
+      <i>Openingstijden onbekend</i>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col_a">
+      <i class="fa fa-user" title="Sociale Media › Kiekebos Installatietechniek"></i>
+    </div>
+    <div class="col_b">
+      Sociale media:
+      <div class="social_links">
+        <a href="javascript:alert('Twitter onbekend...');" title="Twitter › Kiekebos Installatietechniek" class="disable"><i class="fa fa-twitter"></i></a>
+        <a href="javascript:alert('Facebook onbekend...');" title="Facebook › Kiekebos Installatietechniek" class="disable"><i class="fa fa-facebook"></i></a>
+        <a href="javascript:alert('Google plus onbekend...');" title="Google plus › Kiekebos Installatietechniek" class="disable"><i class="fa fa-google-plus"></i></a>
+        <a href="javascript:alert('Linkedin onbekend...');" title="Linkedin › Kiekebos Installatietechniek" class="disable"><i class="fa fa-linkedin"></i></a>
+        <a href="javascript:alert('Youtube onbekend...');" title="Youtube › Kiekebos Installatietechniek" class="disable"><i class="fa fa-caret-right"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="result_right">
+  <img src="http://www.loodgieter-vinden.nl/img/no-image.png" width="237" height="158" alt="Afbeelding › Service provider 2" title="Afbeelding › Service provider 2" class="img_multiple">
+</div>
+<br class="clear">
+<div class="result_bottom">
+  <div class="result_button">
+    <a title="Service provider 2">Bekijk volledig profiel</a>
+  </div>
+  <a href="#" title="Ga naar de boven" class="result_gototop"><i class="fa fa-caret-up"></i></a>
+</div>
+</div>
+>>>>>>> eda3de5e9c6a1bfa464edc3a822a698c138d91d3
