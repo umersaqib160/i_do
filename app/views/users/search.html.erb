@@ -1,4 +1,4 @@
-
+<br><br><br><br><br>
 
 <div class="providers">
 
@@ -6,9 +6,19 @@
 
 
 <%= @service_providers.each do |service_provider| %>
+
   <%= service_provider.name %>
-  <%= service_provider.user.first_name %>
-  <%= service_provider.user.last_name %>
+<br>
+ Name: <%= service_provider.user.first_name %>
+      <%= service_provider.user.last_name %>
+  <br>
+ Email: <%= service_provider.user.email %>
+  <br>
+  Address:  <%= service_provider.user.address%>
+  <br>
+ Phone Number: <%= service_provider.user.phone %>
+  <br>
+
 
 <% end %>
 
