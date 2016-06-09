@@ -4,6 +4,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @users = User.search(params[:search])
     @alert_message = "You are viewing #{@user.first_name}"
+  end
 
   def index
     User.all
@@ -20,9 +21,17 @@ class UsersController < ApplicationController
 
   end
 
+
+  def search
+    @searched_term = params[:service_name]
+    @service_providers = Service.where(name: @searched_term)
+  end
+
+
   private
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :address, )
+    params.require(:user).permit(:address)
   end
+
 end

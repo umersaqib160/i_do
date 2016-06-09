@@ -49,6 +49,15 @@ def service_params
   params.require(:service).permit(:name, :supplier_id)
 end
 
+def self.search(search)
+  if search
+    find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+  else
+    find(:all)
+  end
+end
+
+
 
 
 end

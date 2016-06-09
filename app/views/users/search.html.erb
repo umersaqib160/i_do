@@ -1,0 +1,15 @@
+
+
+<div class="providers">
+
+
+
+
+<%= @service_providers.each do |service_provider| %>
+  <%= service_provider.name %>
+  <%= service_provider.user.first_name %>
+  <%= service_provider.user.last_name %>
+
+<% end %>
+
+</div>

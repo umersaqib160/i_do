@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -10,9 +10,10 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
   <body>
-<<<<<<< HEAD
-  <%= render 'shared/navbar' %>
-  <div class="wrapper">
+
+   <%= render 'layouts/navbar' %>
+
+
     <%= yield %>
 
   <%= javascript_include_tag "https://maps.google.com/maps/api/js?libraries=places&sensor=false" %>
@@ -23,11 +24,10 @@
   <%= yield(:after_js) %>
   </div>
 
-=======
-   <%= render 'layouts/navbar' %>
-    <%= yield %>
+
+
    <%= render 'layouts/footer' %>
     <%= javascript_include_tag 'application' %>
->>>>>>> 8d7b0095193d5fa1f482ef362cc9bbedcbb744fd
+
   </body>
 </html>
