@@ -10,6 +10,7 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
   <body>
+<<<<<<< HEAD
   <%= render 'shared/navbar' %>
   <div class="wrapper">
     <%= yield %>
@@ -22,5 +23,11 @@
   <%= yield(:after_js) %>
   </div>
 
+=======
+   <%= render 'layouts/navbar' %>
+    <%= yield %>
+   <%= render 'layouts/footer' %>
+    <%= javascript_include_tag 'application' %>
+>>>>>>> 8d7b0095193d5fa1f482ef362cc9bbedcbb744fd
   </body>
 </html>

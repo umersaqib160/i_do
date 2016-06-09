@@ -193,7 +193,10 @@ DEPENDENCIES
   figaro
   font-awesome-sass
   geocoder
+<<<<<<< HEAD
   gmaps4rails
+=======
+>>>>>>> 8d7b0095193d5fa1f482ef362cc9bbedcbb744fd
   jbuilder (~> 2.0)
   jquery-rails
   pg
@@ -214,4 +217,8 @@ RUBY VERSION
    ruby 2.3.0p0
 
 BUNDLED WITH
+<<<<<<< HEAD
    1.12.3
+=======
+   1.12.5
+>>>>>>> 8d7b0095193d5fa1f482ef362cc9bbedcbb744fd

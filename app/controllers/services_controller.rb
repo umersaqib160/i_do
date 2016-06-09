@@ -1,7 +1,4 @@
 class ServicesController < ApplicationController
-  skip_before_action :authenticate_user!
-  def index
-    @users = User.all
 
     # Let's DYNAMICALLY build the markers for the view.
     @markers = Gmaps4rails.build_markers(@users) do |user, marker|
@@ -9,10 +6,14 @@ class ServicesController < ApplicationController
       marker.lng user.longitude
 
     end
+  def index
+    @services = Service.all
+
   end
 
   def show
     @service = Service.find(params[:id])
+
 
   end
 
@@ -26,6 +27,7 @@ class ServicesController < ApplicationController
 
   def update
     @service.find(params[:id])
+
   end
 
   def create
