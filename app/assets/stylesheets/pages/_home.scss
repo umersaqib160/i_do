@@ -2,3 +2,41 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+.banner {
+  background-size: cover;
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.fa-search{
+  font-size: 60px;
+  text-align: center;
+}
+
+.fa-thumbs-up{
+  font-size: 60px;
+  text-align: center;
+}
+
+.fa-phone{
+  font-size: 60px;
+  text-align: center;
+}
+
+.wrapper-how-it-works {
+  padding: 200px 0px;
+  text-align: center;
+  color: rgb(210, 51, 51)
+}
+
+.searched-service{
+  color:#000000;
+}
+
+.searched-location {
+  color:#000000;
+}

@@ -8,6 +8,7 @@ gem 'figaro'
 gem 'jbuilder', '~> 2.0'
 gem 'redis'
 gem 'devise'
+gem 'geocoder'
 
 gem 'sass-rails'
 gem 'jquery-rails'
@@ -16,6 +17,7 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
+gem 'omniauth-facebook'
 
 
 group :development, :test do
