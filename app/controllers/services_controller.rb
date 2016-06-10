@@ -1,22 +1,30 @@
 class ServicesController < ApplicationController
-skip_before_action :authenticate_user!, only: [:index, :show]
-    # Let's DYNAMICALLY build the markers for the view.
-    # @markers = Gmaps4rails.build_markers(@users) do |user, marker|
-    #   marker.lat user.latitude
-    #   marker.lng user.longitude
 
-    # end
+    # Let's DYNAMICALLY build the markers for the view.
+
+
+
 
     def index
       if params[:search_term]
 
         @searched_term = params[:search_term]
         @services = Service.where(name: @searched_term)
+
       else
         @services = Service.all
       end
+      @service_users = []
 
+      @services.each do |service|
+      @service_users << service.user
+
+      end
+      @markers = Gmaps4rails.build_markers(@service_users) do |user, marker|
+      marker.lat user.latitude
+      marker.lng user.longitude
     end
+  end
 
     def show
       @service = Service.find(params[:id])
