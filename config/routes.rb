@@ -1,10 +1,6 @@
-
-
 Rails.application.routes.draw do
   root to: 'pages#home'
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
-
-
 
 
 resources :services, only: [:index, :show] do
@@ -29,9 +25,6 @@ namespace :customer do
 end
 
 end
-
-
-
 
 
 
