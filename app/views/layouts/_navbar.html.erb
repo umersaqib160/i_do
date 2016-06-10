@@ -3,9 +3,9 @@
 <div class="navbar-wagon navbar-wagon-fixed">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.png" %>
+    <%= image_tag "logoiDo.png" %>
   <% end %>
-<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
@@ -32,7 +32,7 @@
               <% end %>
             </li>
             <li>
-              <%= link_to "#" do %>
+              <%= link_to "" do %>
                 <i class="fa fa-home"></i>  <%= t ".profile", default: "Home" %>
               <% end %>
             </li>

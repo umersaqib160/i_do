@@ -64,8 +64,4 @@ class ServicesController < ApplicationController
       params.require(:service).permit(:name, :supplier_id)
     end
 
-
-
-
-
   end
