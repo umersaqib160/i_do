@@ -1,14 +1,25 @@
 <div class="banner" style="background-image: url('<%= image_path ("utensils.jpg") %>');">
   <div class="banner-content">
+<div class="heading">
+  <h1 class="title">iDo</h1>
+  <h3 class="tag_line">Any Problem Served</h3>
+</div>
 
 
   <%#= simple_form_for @service do |f| %>
       <p class="searched-service">What service do you seek?</p>
+      <%= form_tag(controller:"services", action: "search") do %>
+  <%= label :service_name, "" %>
+  <%= text_field_tag :service_name, params[:service_name] %>
+
+  <%= submit_tag "Search" %>
+<% end %>
 
   <%#= f.input :name %>
   <p class= "searched-location">What is your location?</p>
-  <%#= f.input :address %>
-  <%#= f.button :submit %>
+
+
+
 
 
   </div>
