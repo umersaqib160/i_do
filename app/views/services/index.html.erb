@@ -1,44 +1,60 @@
-<%= form_tag(controller:"services", action: "index") do %>
+<div style="height: 70px"></div>
+<div class="search_wrapper">
+  <%= form_tag(controller:"services", action: "index") do %>
   <%= label :service_name, "" %>
-  <%= text_field_tag :search_term, params[:search_term] %>
+  <%= text_field_tag :search_term, params[:search_term], class: "home_search" %>
 
-  <%= submit_tag "Search" %>
-<% end %>
-
-
-
-
-<% @services.each do |service| %>
-
-  <%= service.name %>
-<br>
-  <% if service.user %>
-     Name: <%= service.user.first_name %>
-          <%= service.user.last_name %>
-      <br>
-     Email: <%= service.user.email %>
-      <br>
-      Address:  <%= service.user.address%>
-      <br>
-     Phone Number: <%= service.user.phone %>
-      <br>
-  <% else %>
-      <p>No user found</p>
+  <%= submit_tag "Search", class: "btn btn-primary home_search_button" %>
   <% end %>
-<% end %>
-
-
-<div id="map" style="width: 100%; height: 600px;"></div>
 </div>
-<% content_for(:after_js) do %>
-  <%= javascript_tag do %>
-    $(document).on('ready', function() {
-      handler = Gmaps.build('Google');
-      handler.buildMap({ internal: { id: 'map' } }, function(){
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-lg-6">
+      <div id="map" style="max-width: 500px; height: 400px;">
+
+        <% content_for(:after_js) do %>
+        <%= javascript_tag do %>
+        $(document).on('ready', function() {
+        handler = Gmaps.build('Google');
+        handler.buildMap({ internal: { id: 'map' } }, function(){
         markers = handler.addMarkers(<%= raw @markers.to_json %>);
         handler.bounds.extendWith(markers);
         handler.fitMapToBounds();
       });
     })
+    <% end %>
+    <% end %>
+  </div>
+</div>
+<div class="col-xs-12 col-sm-12 col-lg-6">
+  <% @services.each do |service| %>
+
+  <%= link_to service.name, service_path(service) %>
+  <br>
+  <% if service.user %>
+  <div class="service_data">
+
+      <strong> Name:</strong>
+      <%= service.user.first_name %> <%= service.user.last_name %>
+      <br>
+  <strong> Email:</strong> <%= service.user.email %>
+  <br>
+  <strong> Address: </strong> <%= service.user.address%>
+  <br>
+  <strong> Phone Number:</strong> <%= service.user.phone %>
+  <br>
+
+  </div>
+  <% else %>
+  <p>No user found</p>
   <% end %>
-<% end %>
+  <% end %>
+
+</div>
+
+</div>
+</div>
+
+
+
+

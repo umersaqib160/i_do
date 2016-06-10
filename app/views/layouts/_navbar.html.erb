@@ -5,7 +5,6 @@
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
     <%= image_tag "logoiDo.png" %>
   <% end %>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
@@ -70,3 +69,13 @@
     </div>
   </div>
 </div>
+
+<% content_for :after_js do %>
+  <script>
+    $(function() {
+      $("#navbar-wagon-menu").click(function() {
+        $(".dropdown-menu").toggle();
+      })
+    })
+  </script>
+<% end %>
