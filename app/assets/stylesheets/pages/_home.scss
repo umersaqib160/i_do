@@ -11,6 +11,25 @@
   text-align: center;
 }
 
+.home_search {
+  padding: 10px;
+  border-radius: 3pt;
+}
+
+.home_search_button {
+height: 47px;
+border-radius: 3pt;
+}
+
+.title {
+  font-size:80px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.tag_line {
+  margin:0px;
+}
 
 .fa-search{
   font-size: 60px;
@@ -30,13 +49,19 @@
 .wrapper-how-it-works {
   padding: 200px 0px;
   text-align: center;
-  color: rgb(210, 51, 51)
+  color: rgb(210, 51, 51);
 }
 
 .searched-service{
-  color:#000000;
+  color:white;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .searched-location {
   color:#000000;
+}
+
+.logo{
+  width: 450px;
 }

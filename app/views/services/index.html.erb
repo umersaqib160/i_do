@@ -1,101 +1,61 @@
-<div class="left">
-  <h1 title="Search results"></h1>
+<div style="height: 70px"></div>
+<div class="search_wrapper">
+  <%= form_tag(controller:"services", action: "index") do %>
+  <%= label :service_name, "" %>
+  <%= text_field_tag :search_term, params[:search_term], class: "home_search" %>
 
-  <p>
-    Search results: <b>...</b>.
-  </p>
+  <%= submit_tag "Search", class: "btn btn-primary home_search_button" %>
+  <% end %>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-lg-6">
+      <div id="map" style="max-width: 500px; height: 400px;">
+
+        <% content_for(:after_js) do %>
+        <%= javascript_tag do %>
+        $(document).on('ready', function() {
+        handler = Gmaps.build('Google');
+        handler.buildMap({ internal: { id: 'map' } }, function(){
+        markers = handler.addMarkers(<%= raw @markers.to_json %>);
+        handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+      });
+    })
+    <% end %>
+    <% end %>
+  </div>
+</div>
+<div class="col-xs-12 col-sm-12 col-lg-6">
+  <% @services.each do |service| %>
+
+  <%= link_to service.name, service_path(service) %>
+  <br>
+  <% if service.user %>
+  <div class="service_data">
+
+
+      <strong> Name:</strong>
+      <%= service.user.first_name %> <%= service.user.last_name %>
+      <br>
+  <strong> Email:</strong> <%= service.user.email %>
+  <br>
+  <strong> Address: </strong> <%= service.user.address%>
+  <br>
+  <strong> Phone Number:</strong> <%= service.user.phone %>
+  <br>
+
+  </div>
+  <% else %>
+  <p>No user found</p>
+  <% end %>
+  <% end %>
+
 </div>
 
-<div id="cont_results" class="multiple">
-
-  <div class="bar_result" itemscope="" itemtype="http://schema.org/LocalBusiness">
-    <div class="container clearfix">
-      <div class="card">
-        <h2><a title="service provider 1"><span itemprop="name">Service provider 1</span></a></h2>
-        <div class="table_result">
-          <div class="row">
-            <div class="col_a">
-              <i class="fa fa-street-view" title="Informatie › "></i>
-            </div>
-            <div class="col_b" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
-              <span itemprop="streetAddress">Wingerdweg 281</span>, <span itemprop="postalCode">1032 AK</span> <span itemprop="addressLocality">Amsterdam</span> (<span itemprop="addressRegion">Noord-Holland</span>)
-            </div>
-          </div>
-          <div class="row">
-            <div class="col_a">
-              <i class="fa fa-phone" title="Telefoonnummer › "></i>
-            </div>
-            <div class="col_b">
-              Tel: <span itemprop="telephone">-</span>,
-              Fax: <span itemprop="faxNumber">-</span>,
-              KvK: <span itemprop="taxID">-</span>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col_a">
-              <i class="fa fa-at" title="E-mail › Service proivder 1"></i>
-            </div>
-            <div class="col_b">
-              <a title="E-mail › ">E-mail › Service@provider1.com</a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col_b">
-            </div>
-          </div>
-        </div>
-      </div>
-      <br class="clear">
-      <div class="result_bottom">
-        <div class="result_button">
-          <a href="" title="Go to profile" class="result_gotoprofile">Go to profile</a>
-        </div>
-      </div>
-    </div>
+</div>
+</div>
 
 
-    <div class="container clearfix">
-      <div class="card">
-        <h2><a title=""><span itemprop="name">Service provider 2</span></a></h2>
-        <div class="table_result">
-          <div class="row">
-            <div class="col_a">
-              <i class="fa fa-street-view" title="Informatie › "></i>
-            </div>
-            <div class="col_b" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
-              <span itemprop="streetAddress">Hertenlaan 88</span>, <span itemprop="postalCode">9408 CM</span> <span itemprop="addressLocality">Assen</span> (<span itemprop="addressRegion">Drenthe</span>)
-            </div>
-          </div>
-          <div class="row">
-            <div class="col_a">
-              <i class="fa fa-phone" title="Telefoonnummer › "></i>
-            </div>
-            <div class="col_b">
-              Tel: <span itemprop="telephone">0592-398602</span>,
-              Fax: <span itemprop="faxNumber">-</span>,
-              KvK: <span itemprop="taxID">04078160</span>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col_a">
-              <i class="fa fa-at" title="E-mail › Service provider 2"></i>
-            </div>
-            <div class="col_b">
-              <a title="E-mail › Service provider 2">E-mail › Service@provider2.com</a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col_b">
-            </div>
-          </div>
-        </div>
-      </div>
-      <br class="clear">
-      <div class="result_bottom">
-        <div class="result_button">
-          <a title="Service provider 2">Go to Profile</a>
-        </div>
-        <a href="#" title="Go to profile" class="result_gotoprofile"></a>
-      </div>
-    </div>
-  </div>
+
+

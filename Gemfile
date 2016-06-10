@@ -9,16 +9,22 @@ gem 'jbuilder', '~> 2.0'
 gem 'redis'
 gem 'devise'
 gem 'geocoder'
+gem "coffee-rails"
+gem "gmaps4rails"
 
 gem 'sass-rails'
 gem 'jquery-rails'
 gem 'uglifier'
 gem 'bootstrap-sass'
+gem 'bootstrap-social-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'omniauth-facebook'
 
+source 'https://rails-assets.org' do
+  gem "rails-assets-underscore"
+end
 
 group :development, :test do
   gem 'binding_of_caller'

@@ -59,6 +59,8 @@ ActiveRecord::Schema.define(version: 20160609131817) do
     t.string   "last_name"
     t.string   "address"
     t.integer  "phone"
+    t.float    "latitude"
+    t.float    "longitude"
     t.string   "provider"
     t.string   "uid"
     t.string   "picture"

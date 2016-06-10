@@ -1,16 +1,19 @@
-<div class="banner" style="background-image: url('<%= image_path ("utensils.jpg") %>');">
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(186, 197, 204, 0.6) 0%, rgba(40, 74, 97, 0.6) 50%), url('<%= image_path ("utensils.jpg") %>');">
   <div class="banner-content">
+<div class="heading">
+ <%= image_tag "logoiDo.png", class: "logo" %>
 
+</div>
 
-  <%#= simple_form_for @service do |f| %>
-      <p class="searched-service">What service do you seek?</p>
+<div>
 
-  <%#= f.input :name %>
-  <p class= "searched-location">What is your location?</p>
-  <%#= f.input :address %>
-  <%#= f.button :submit %>
+  <p class="searched-service">What service do you seek?</p>
+  <%= form_tag(controller:"services", action: "index") do %>
+  <%= text_field_tag :search_term, params[:search_term], class: "home_search" %>
+  <%= submit_tag "Search", class: "btn btn-primary home_search_button" %>
 
-
+<% end %>
+</div>
 
   </div>
 </div>
