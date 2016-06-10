@@ -8,9 +8,9 @@
 
   <%#= simple_form_for @service do |f| %>
       <p class="searched-service">What service do you seek?</p>
-      <%= form_tag(controller:"services", action: "search") do %>
+      <%= form_tag(controller:"services", action: "index") do %>
   <%= label :service_name, "" %>
-  <%= text_field_tag :service_name, params[:service_name] %>
+  <%= text_field_tag :search_term, params[:search_term] %>
 
   <%= submit_tag "Search" %>
 <% end %>
