@@ -1,63 +1,71 @@
 class ServicesController < ApplicationController
 
     # Let's DYNAMICALLY build the markers for the view.
-    @markers = Gmaps4rails.build_markers(@users) do |user, marker|
+
+
+
+
+    def index
+      if params[:search_term]
+
+        @searched_term = params[:search_term]
+        @services = Service.where(name: @searched_term)
+
+      else
+        @services = Service.all
+      end
+      @service_users = []
+
+      @services.each do |service|
+      @service_users << service.user
+
+      end
+      @markers = Gmaps4rails.build_markers(@service_users) do |user, marker|
       marker.lat user.latitude
       marker.lng user.longitude
+    end
+  end
+
+    def show
+      @service = Service.find(params[:id])
+
 
     end
-  def index
-    @services = Service.all
 
-  end
+    def new
+      @service = Service.new
+    end
 
-  def show
-    @service = Service.find(params[:id])
+    def edit
+      @service.find(params[:id])
+    end
 
+    def update
+      @service.find(params[:id])
 
-  end
+    end
 
-  def new
-    @service = Service.new
-  end
-  def edit
-    @service.find(params[:id])
+    def create
+      @service = Service.new(service_params)
+      @service.save!
+      redirect_to service_path(@service)
+    end
+    def destroy
+      @service = Service.find(params[:id])
+      @service.destroy
 
-  end
+      redirect_to service_path
 
-  def update
-    @service.find(params[:id])
+    end
 
-  end
+    private
 
-  def create
-    @service = Service.new(service_params)
-    @service.save!
-    redirect_to service_path(@service)
-  end
-def destroy
-  @service = Service.find(params[:id])
-  @service.destroy
+    def service_params
+      params.require(:service).permit(:name, :supplier_id)
+    end
 
-  redirect_to service_path
-
-end
-
-private
-
-def service_params
-  params.require(:service).permit(:name, :supplier_id)
-end
-
-def self.search(search)
-  if search
-    find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
-  else
-    find(:all)
-  end
-end
 
 
 
 
-end
+  end

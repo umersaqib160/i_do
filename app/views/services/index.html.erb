@@ -1,201 +1,34 @@
-<div class="left">
-  <h1 title="Search results"></h1>
-
-  <p>
-    Search results: <b>...</b>.
-  </p>
-</div>
-
-<div id="cont_results" class="multiple">
-
-  <div class="bar_result" itemscope="" itemtype="http://schema.org/LocalBusiness">
-    <div class="container clearfix">
-      <div class="card">
-        <h2><a title="service provider 1"><span itemprop="name">Service provider 1</span></a></h2>
-        <div class="table_result">
-          <div class="row">
-            <div class="col_a">
-              <i class="fa fa-street-view" title="Informatie › "></i>
-            </div>
-            <div class="col_b" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
-              <span itemprop="streetAddress">Wingerdweg 281</span>, <span itemprop="postalCode">1032 AK</span> <span itemprop="addressLocality">Amsterdam</span> (<span itemprop="addressRegion">Noord-Holland</span>)
-            </div>
-          </div>
-          <div class="row">
-            <div class="col_a">
-              <i class="fa fa-phone" title="Telefoonnummer › "></i>
-            </div>
-            <div class="col_b">
-              Tel: <span itemprop="telephone">-</span>,
-              Fax: <span itemprop="faxNumber">-</span>,
-              KvK: <span itemprop="taxID">-</span>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col_a">
-              <i class="fa fa-at" title="E-mail › Service proivder 1"></i>
-            </div>
-            <div class="col_b">
-              <a title="E-mail › ">E-mail › Service@provider1.com</a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col_b">
-            </div>
-          </div>
-        </div>
-      </div>
-      <br class="clear">
-      <div class="result_bottom">
-        <div class="result_button">
-          <a ref="#" title="Go to profile" class="result_gotoprofile">Go to profile</a>
-        </div>
-      </div>
-    </div>
-=======
-
-<h1>Service Providers</h1>
-
-<br><br>
-<%= form_tag(controller:"users", action: "search", :method => 'get') do %>
-  <%= label :service_name, "Search classifieds near : " %>
-  <%= text_field_tag :service_name, params[:service_name] %>
->>>>>>> 32b92a91c26b0e9ee860ef1b666127fe08cfb9b7
+<%= form_tag(controller:"services", action: "index") do %>
+  <%= label :service_name, "" %>
+  <%= text_field_tag :search_term, params[:search_term] %>
 
   <%= submit_tag "Search" %>
 <% end %>
 
-<<<<<<< HEAD
-    <div class="container clearfix">
-      <div class="card">
-        <h2><a title=""><span itemprop="name">Service provider 2</span></a></h2>
-=======
 
-<!-- this is the google maps code -->
-<div class="wrapper">
-<div class="providers">
-<div class="left"></div>
-<div id="cont_results" class="multiple">
-  <div class="bar_result" itemscope="" itemtype="http://schema.org/LocalBusiness">
-    <div class="container clearfix">
-      <div class="left_table">
-        <h2><a title="service provider 1"><span itemprop="name">Service provider 1</span></a></h2>
->>>>>>> 32b92a91c26b0e9ee860ef1b666127fe08cfb9b7
-        <div class="table_result">
-          <div class="row">
-            <div class="col_a">
-              <i class="fa fa-street-view" title="Informatie › "></i>
-            </div>
-            <div class="col_b" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
-<<<<<<< HEAD
-              <span itemprop="streetAddress">Hertenlaan 88</span>, <span itemprop="postalCode">9408 CM</span> <span itemprop="addressLocality">Assen</span> (<span itemprop="addressRegion">Drenthe</span>)
-=======
-              <span itemprop="streetAddress">Wingerdweg 281</span>, <span itemprop="postalCode">1032 AK</span> <span itemprop="addressLocality">Amsterdam</span> (<span itemprop="addressRegion">Noord-Holland</span>)
->>>>>>> 32b92a91c26b0e9ee860ef1b666127fe08cfb9b7
-            </div>
-          </div>
-          <div class="row">
-            <div class="col_a">
-              <i class="fa fa-phone" title="Telefoonnummer › "></i>
-            </div>
-            <div class="col_b">
-<<<<<<< HEAD
-              Tel: <span itemprop="telephone">0592-398602</span>,
-              Fax: <span itemprop="faxNumber">-</span>,
-              KvK: <span itemprop="taxID">04078160</span>
-=======
-              Tel: <span itemprop="telephone">-</span>,
-              Fax: <span itemprop="faxNumber">-</span>,
-              KvK: <span itemprop="taxID">-</span>
->>>>>>> 32b92a91c26b0e9ee860ef1b666127fe08cfb9b7
-            </div>
-          </div>
-          <div class="row">
-            <div class="col_a">
-<<<<<<< HEAD
-              <i class="fa fa-at" title="E-mail › Service provider 2"></i>
-            </div>
-            <div class="col_b">
-              <a title="E-mail › Service provider 2">E-mail › Service@provider2.com</a>
-=======
-              <i class="fa fa-at" title="E-mail › Service proivder 1"></i>
-            </div>
-            <div class="col_b">
-              <a title="E-mail › ">E-mail › Service@provider1.com</a>
->>>>>>> 32b92a91c26b0e9ee860ef1b666127fe08cfb9b7
-            </div>
-          </div>
-          <div class="row">
-            <div class="col_b">
-            </div>
-          </div>
-        </div>
-      </div>
-      <br class="clear">
-      <div class="result_bottom">
-        <div class="result_button">
-<<<<<<< HEAD
-          <a title="Service provider 2">Go to Profile</a>
-=======
-          <a ref="#" title="Go to profile" class="result_gotoprofile">Go to profile</a>
->>>>>>> 32b92a91c26b0e9ee860ef1b666127fe08cfb9b7
-        </div>
-        <a href="#" title="Go to profile" class="result_gotoprofile"></a>
-      </div>
-    </div>
-<<<<<<< HEAD
-  </div>
-=======
 
-        <div class="container clearfix">
-      <div class="card">
-        <h2><a title=""><span itemprop="name">Service provider 2</span></a></h2>
-        <div class="table_result">
-          <div class="row">
-            <div class="col_a">
-              <i class="fa fa-street-view" title="Informatie › "></i>
-            </div>
-            <div class="col_b" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
-              <span itemprop="streetAddress">Hertenlaan 88</span>, <span itemprop="postalCode">9408 CM</span> <span itemprop="addressLocality">Assen</span> (<span itemprop="addressRegion">Drenthe</span>)
-            </div>
-          </div>
-          <div class="row">
-            <div class="col_a">
-              <i class="fa fa-phone" title="Telefoonnummer › "></i>
-            </div>
-            <div class="col_b">
-              Tel: <span itemprop="telephone">0592-398602</span>,
-              Fax: <span itemprop="faxNumber">-</span>,
-              KvK: <span itemprop="taxID">04078160</span>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col_a">
-              <i class="fa fa-at" title="E-mail › Service provider 2"></i>
-            </div>
-            <div class="col_b">
-              <a title="E-mail › Service provider 2">E-mail › Service@provider2.com</a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col_b">
-            </div>
-          </div>
-        </div>
-      </div>
-      <br class="clear">
-      <div class="result_bottom">
-        <div class="result_button">
-          <a title="Service provider 2">Go to Profile</a>
-        </div>
-        <a href="#" title="Go to profile" class="result_gotoprofile"></a>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
 
-<div id="map" style="width: 50%; height: 600px;"></div>
+<% @services.each do |service| %>
+
+  <%= service.name %>
+<br>
+  <% if service.user %>
+     Name: <%= service.user.first_name %>
+          <%= service.user.last_name %>
+      <br>
+     Email: <%= service.user.email %>
+      <br>
+      Address:  <%= service.user.address%>
+      <br>
+     Phone Number: <%= service.user.phone %>
+      <br>
+  <% else %>
+      <p>No user found</p>
+  <% end %>
+<% end %>
+
+
+<div id="map" style="width: 100%; height: 600px;"></div>
 </div>
 <% content_for(:after_js) do %>
   <%= javascript_tag do %>
@@ -209,4 +42,3 @@
     })
   <% end %>
 <% end %>
->>>>>>> 32b92a91c26b0e9ee860ef1b666127fe08cfb9b7
