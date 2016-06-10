@@ -64,8 +64,4 @@ skip_before_action :authenticate_user!
       params.require(:service).permit(:name, :supplier_id)
     end
 
-
-
-
-
   end

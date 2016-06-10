@@ -49,13 +49,19 @@ border-radius: 3pt;
 .wrapper-how-it-works {
   padding: 200px 0px;
   text-align: center;
-  color: rgb(210, 51, 51)
+  color: rgb(210, 51, 51);
 }
 
 .searched-service{
-  color:#000000;
+  color:white;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .searched-location {
   color:#000000;
+}
+
+.logo{
+  width: 450px;
 }
