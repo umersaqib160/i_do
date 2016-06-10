@@ -1,5 +1,5 @@
 class ServicesController < ApplicationController
-
+skip_before_action :authenticate_user!, only: [:index, :show]
     # Let's DYNAMICALLY build the markers for the view.
     # @markers = Gmaps4rails.build_markers(@users) do |user, marker|
     #   marker.lat user.latitude

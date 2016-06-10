@@ -3,4 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   before_action :authenticate_user!
   protect_from_forgery with: :exception
+
+   def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:city, :first_name, :last_name, :zipcode, :street])
+  end
 end
